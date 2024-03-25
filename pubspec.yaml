@@ -22,8 +22,12 @@ dependencies:
 
   easy_localization: ^3.0.5
 
+  ## Utility
+  logger: ^2.2.0
+
   widgets:
     path: module/widgets
+ 
 
 
 dependency_overrides:
