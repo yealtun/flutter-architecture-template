@@ -20,6 +20,8 @@ dependencies:
   json_annotation: ^4.8.1
   envied: ^0.5.3
 
+  easy_localization: ^3.0.5
+
   widgets:
     path: module/widgets
 
@@ -48,3 +50,6 @@ flutter_launcher_icons:
 
 flutter:
   uses-material-design: true
+
+  assets:
+    - assets/translations/

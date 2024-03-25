@@ -1,11 +1,10 @@
 include: package:very_good_analysis/analysis_options.yaml
 
-analysis:
-  exclude: 
-    - test/**/*_test.dart
-    - lib/generated/**
+
+analyzer:
+  exclude:
     - "**/*.g.dart"
-    - "/*.gen.dart"
-    - "/*.freezed.dart" 
-    - "bin/cache/**"
-  
+    - "**/*.freezed.dart"
+    - "**/*.gr.dart"
+    - "**test/.test_coverage.dart"
+    - "**bin/cache/**"
