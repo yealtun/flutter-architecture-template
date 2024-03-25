@@ -10,10 +10,41 @@ dependencies:
   flutter:
     sdk: flutter
 
+  ## Modules
+
+  ## Core
+  kartal: ^3.5.0
+  vexana: ^4.0.1
+  equatable: ^2.0.5
+  flutter_bloc: ^8.1.4
+  json_annotation: ^4.8.1
+  envied: ^0.5.3
+
+  widgets:
+    path: module/widgets
+
+
+dependency_overrides:
+  ## Add your dependency overrides here.
+
 dev_dependencies:
+  ## test unit test, icon generation, file generation packages are written here.
   flutter_test:
     sdk: flutter
-  flutter_lints: ^3.0.0
+  flutter_lints: ^3.0.1
+  very_good_analysis: ^5.1.0
+  build_runner: ^2.4.8
+  flutter_gen: ^5.4.0
+  flutter_launcher_icons: ^0.13.1
+
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/images/app_icon.png"
+
+
+
+
 
 flutter:
   uses-material-design: true
