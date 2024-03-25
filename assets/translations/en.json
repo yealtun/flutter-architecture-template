@@ -1,0 +1,18 @@
+{
+    "hello": "Hello World!",
+    "home":{
+        "title":"Home Page"
+    },
+    "general":{
+        "button":{
+            "save":"Save",
+            "cancel":"Cancel"
+        },
+        "dialog":{
+            "version":{
+                "title":"Version",
+                "message":"Version info:"
+            }
+        }
+    }
+}
