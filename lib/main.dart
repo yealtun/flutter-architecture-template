@@ -1,11 +1,13 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_architecture_template/product/init/application_initialize.dart';
+import 'package:flutter_architecture_template/product/init/config/app_environment.dart';
 import 'package:flutter_architecture_template/product/init/language/locale_keys.g.dart';
 import 'package:flutter_architecture_template/product/init/product_localization.dart';
 import 'package:flutter_architecture_template/product/utility/enums/locales.dart';
 
 void main() async{
+  WidgetsFlutterBinding.ensureInitialized();
 
   await ApplicationInitialize().make();
   runApp(
@@ -30,6 +32,7 @@ class MyApp extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
+                  Text(AppEnvironmentItems.test.value),
                   Text(LocaleKeys.hello).tr(),
                   ElevatedButton(
                     onPressed: () {
