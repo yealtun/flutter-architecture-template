@@ -4,6 +4,7 @@ import 'package:flutter_architecture_template/product/init/application_initializ
 import 'package:flutter_architecture_template/product/init/config/app_environment.dart';
 import 'package:flutter_architecture_template/product/init/language/locale_keys.g.dart';
 import 'package:flutter_architecture_template/product/init/product_localization.dart';
+import 'package:flutter_architecture_template/product/init/theme/index.dart';
 import 'package:flutter_architecture_template/product/utility/enums/locales.dart';
 
 void main() async{
@@ -19,6 +20,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: CustomLightTheme().themeData,
+      darkTheme: CustomDarkTheme().themeData,
       localizationsDelegates: context.localizationDelegates,
       supportedLocales: context.supportedLocales,
       locale: context.locale,

@@ -20,6 +20,7 @@ dependencies:
   ## Utility
   kartal: ^3.5.0
   logger: ^2.2.0
+  google_fonts: ^6.2.1
   
   #Config
   envied: ^0.5.3
