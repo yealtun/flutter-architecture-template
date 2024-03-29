@@ -10,25 +10,15 @@ part of 'prod_env.dart';
 // ignore_for_file: type=lint
 final class _ProdEnv {
   static const List<int> _enviedkey_baseUrl = <int>[
-    1906833993,
-    131238517,
-    4217988781,
-    3736187713,
-    4255088867,
-    991368993,
-    4215736398,
-    695823173,
+    1450580048,
+    1789945472,
+    3084227320,
   ];
 
   static const List<int> _envieddata_baseUrl = <int>[
-    1906833977,
-    131238407,
-    4217988802,
-    3736187685,
-    4255088835,
-    991369044,
-    4215736380,
-    695823145,
+    1450579973,
+    1789945554,
+    3084227252,
   ];
 
   static final String _baseUrl = String.fromCharCodes(List<int>.generate(
@@ -38,25 +28,23 @@ final class _ProdEnv {
   ).map((int i) => _envieddata_baseUrl[i] ^ _enviedkey_baseUrl[i]));
 
   static const List<int> _enviedkey_apiKey = <int>[
-    444106230,
-    4189384833,
-    1696977554,
-    2221988519,
-    2795665720,
-    2072337067,
-    2403288796,
-    1708338386,
+    2776160802,
+    3858439906,
+    949069201,
+    711579452,
+    2292807127,
+    988597806,
+    3580911742,
   ];
 
   static const List<int> _envieddata_apiKey = <int>[
-    444106118,
-    4189384947,
-    1696977661,
-    2221988547,
-    2795665688,
-    2072337098,
-    2403288748,
-    1708338363,
+    2776160835,
+    3858439826,
+    949069304,
+    711579420,
+    2292807068,
+    988597835,
+    3580911623,
   ];
 
   static final String _apiKey = String.fromCharCodes(List<int>.generate(
@@ -66,19 +54,17 @@ final class _ProdEnv {
   ).map((int i) => _envieddata_apiKey[i] ^ _enviedkey_apiKey[i]));
 
   static const List<int> _enviedkey_test = <int>[
-    1217343385,
-    1561575830,
-    1756626094,
-    2026856394,
-    643439457,
+    1951750791,
+    1251060624,
+    74274519,
+    1549458060,
   ];
 
   static const List<int> _envieddata_test = <int>[
-    1217343469,
-    1561575923,
-    1756626141,
-    2026856382,
-    643439440,
+    1951750899,
+    1251060725,
+    74274468,
+    1549458168,
   ];
 
   static final String _test = String.fromCharCodes(List<int>.generate(

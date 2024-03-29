@@ -4,7 +4,9 @@ import 'package:flutter_architecture_template/product/init/application_initializ
 import 'package:flutter_architecture_template/product/init/config/app_environment.dart';
 import 'package:flutter_architecture_template/product/init/language/locale_keys.g.dart';
 import 'package:flutter_architecture_template/product/init/product_localization.dart';
+import 'package:flutter_architecture_template/product/init/theme/index.dart';
 import 'package:flutter_architecture_template/product/utility/enums/locales.dart';
+import 'package:gen/gen.dart';
 
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();
@@ -19,6 +21,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: CustomLightTheme().themeData,
+      darkTheme: CustomDarkTheme().themeData,
       localizationsDelegates: context.localizationDelegates,
       supportedLocales: context.supportedLocales,
       locale: context.locale,
@@ -32,6 +36,22 @@ class MyApp extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
+                  Assets.images.imgSpace.image(
+                    package: 'gen',
+                    width: 200,
+                    height: 200,
+                  ),
+                  Assets.lottie.animSpace.lottie(
+                    package: 'gen',
+                    width: 200,
+                    height: 200,
+                  ),
+                  Assets.icons.icTurkey.svg(
+                    package: 'gen',
+                    width: 200,
+                    height: 200,
+                  ),
+                  
                   Text(AppEnvironmentItems.test.value),
                   Text(LocaleKeys.hello).tr(),
                   ElevatedButton(
