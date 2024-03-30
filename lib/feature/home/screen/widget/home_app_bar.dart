@@ -1,4 +1,4 @@
-part of '../home_view.dart';
+part of '../home_screen.dart';
 
 
 class _HomeAppBar extends StatelessWidget {
