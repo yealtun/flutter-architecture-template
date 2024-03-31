@@ -1,83 +1,33 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_architecture_template/feature/home/screen/home_screen.dart';
 import 'package:flutter_architecture_template/product/init/application_initialize.dart';
-import 'package:flutter_architecture_template/product/init/config/app_environment.dart';
-import 'package:flutter_architecture_template/product/init/language/locale_keys.g.dart';
 import 'package:flutter_architecture_template/product/init/product_localization.dart';
 import 'package:flutter_architecture_template/product/init/theme/index.dart';
-import 'package:flutter_architecture_template/product/utility/enums/locales.dart';
-import 'package:gen/gen.dart';
 
-void main() async{
+import 'product/navigation/app_router.dart';
+
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   await ApplicationInitialize().make();
   runApp(
-    ProductLocalization(child: MyApp()),
+    ProductLocalization(child: _MyApp()),
   );
 }
 
-class MyApp extends StatelessWidget {
+class _MyApp extends StatelessWidget {
+
+  static final AppRouter _appRouter = AppRouter();
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
+      routerConfig: _appRouter.config(),
       theme: CustomLightTheme().themeData,
       darkTheme: CustomDarkTheme().themeData,
       localizationsDelegates: context.localizationDelegates,
       supportedLocales: context.supportedLocales,
       locale: context.locale,
-      home: Builder(
-        builder: (context) {
-          return Scaffold(
-            appBar: AppBar(
-              title: Text(LocaleKeys.home_title).tr(),
-            ),
-            body: Center(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  Assets.images.imgSpace.image(
-                    package: 'gen',
-                    width: 200,
-                    height: 200,
-                  ),
-                  Assets.lottie.animSpace.lottie(
-                    package: 'gen',
-                    width: 200,
-                    height: 200,
-                  ),
-                  Assets.icons.icTurkey.svg(
-                    package: 'gen',
-                    width: 200,
-                    height: 200,
-                  ),
-                  
-                  Text(AppEnvironmentItems.test.value),
-                  Text(LocaleKeys.hello).tr(),
-                  ElevatedButton(
-                    onPressed: () {
-                      ProductLocalization.updateLanguage(
-                        context: context,
-                        value: Locales.tr,
-                      );
-                    },
-                    child: Text('tr').tr(),
-                  ),
-                  ElevatedButton(
-                    onPressed: () {
-                      ProductLocalization.updateLanguage(
-                        context: context,
-                        value: Locales.en,
-                      );
-                    },
-                    child: Text('en').tr(),
-                  ),
-                ],
-              ),
-            ),
-          );
-        },
-      ),
     );
   }
 }
