@@ -28,6 +28,10 @@ dependencies:
   ## state
   flutter_bloc: ^8.1.5
 
+  #Navigation
+  auto_route: ^8.0.2
+  auto_route_generator: ^8.0.0
+
   widgets:
     path: module/widgets
   gen:
@@ -42,6 +46,7 @@ dev_dependencies:
     sdk: flutter
   very_good_analysis: ^5.1.0
   flutter_launcher_icons: ^0.13.1
+  build_runner: ^2.4.9
 
 flutter_launcher_icons:
   android: true
@@ -51,5 +56,4 @@ flutter_launcher_icons:
 flutter:
   uses-material-design: true
   assets:
-    - assets/env/
     - assets/translations/
