@@ -36,6 +36,8 @@ dependencies:
     path: module/widgets
   gen:
     path: module/gen
+  common:
+    path: module/common
 
 dependency_overrides:
   ## Add your dependency overrides here.
