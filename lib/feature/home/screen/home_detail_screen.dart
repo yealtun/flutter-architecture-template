@@ -1,7 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 
-@RoutePage()
+@RoutePage<bool?>()
 final class HomeDetailScreen extends StatelessWidget {
   final int id;
   HomeDetailScreen({required this.id});
@@ -16,7 +16,9 @@ final class HomeDetailScreen extends StatelessWidget {
             Text('Home Detail Screen'),
             Text('ID: $id'),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                context.router.popForced(true);
+              },
               child: Text('Back'),
             ),
           ],
