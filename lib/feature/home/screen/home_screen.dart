@@ -77,8 +77,9 @@ class _HomeScreenState extends State<HomeScreen> with HomeScreenMixin {
               child: Text('en').tr(),
             ),
             ElevatedButton(
-              onPressed: () {
-                context.router.push(HomeDetailRoute(id: 1));
+              onPressed: () async{
+               final response = await context.router.push<bool?>(HomeDetailRoute(id: 1));
+               print("Response: $response");
               },
               child: Text("Detay Sayfası").tr(),
             ),
