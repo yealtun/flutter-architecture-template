@@ -58,15 +58,15 @@ class _HomeScreenState extends State<HomeScreen> with HomeScreenMixin {
               },
               child: Text('tr').tr(),
             ),
-            const ProjectNetworkImage(
-              url:
-                  "https://image-3.uhdpaper.com/wallpaper/ghostbusters-frozen-empire-slimer-green-ghost-4k-wallpaper-uhdpaper.com-8@3@a.jpg",
-            ),
-            CustomNetworkImage(
-              imageUrl:
-                  "https://image-3.uhdpaper.com/wallpaper/ghostbusters-frozen-empire-slimer-green-ghost-4k-wallpaper-uhdpaper.com-8@3@a.jpg",
+            // const ProjectNetworkImage(
+            //   url:
+            //       "https://image-3.uhdpaper.com/wallpaper/ghostbusters-frozen-empire-slimer-green-ghost-4k-wallpaper-uhdpaper.com-8@3@a.jpg",
+            // ),
+            // CustomNetworkImage(
+            //   imageUrl:
+            //       "https://image-3.uhdpaper.com/wallpaper/ghostbusters-frozen-empire-slimer-green-ghost-4k-wallpaper-uhdpaper.com-8@3@a.jpg",
                   
-            ),
+            // ),
             ElevatedButton(
               onPressed: () {
                 ProductLocalization.updateLanguage(
