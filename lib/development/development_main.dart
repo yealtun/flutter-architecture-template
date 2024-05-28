@@ -1,25 +1,27 @@
+import 'package:device_preview/device_preview.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_architecture_template/feature/home/screen/home_screen.dart';
 import 'package:flutter_architecture_template/product/init/application_initialize.dart';
 import 'package:flutter_architecture_template/product/init/product_localization.dart';
 import 'package:flutter_architecture_template/product/init/theme/index.dart';
+import 'package:flutter_architecture_template/product/navigation/app_router.dart';
 import 'package:widgets/index.dart';
-
-import 'product/navigation/app_router.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   await ApplicationInitialize().make();
   runApp(
-    ProductLocalization(child: _MyApp()),
+    DevicePreview(
+      builder: (context) => ProductLocalization(
+        child: _MyApp(),
+      ),
+    ),
   );
 }
 
 class _MyApp extends StatelessWidget {
-
-  static final AppRouter _appRouter = AppRouter();
+  static final _appRouter = AppRouter();
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(

@@ -7,9 +7,7 @@ import 'package:flutter_architecture_template/product/init/language/locale_keys.
 import 'package:flutter_architecture_template/product/init/product_localization.dart';
 import 'package:flutter_architecture_template/product/navigation/app_router.dart';
 import 'package:flutter_architecture_template/product/utility/enums/locales.dart';
-import 'package:flutter_architecture_template/product/widget/project_network_image.dart';
 import 'package:gen/gen.dart';
-import 'package:common/common.dart';
 
 part 'widget/home_app_bar.dart';
 
